@@ -16,16 +16,10 @@ git clone https://github.com/FindMalek/DriveLink.git
 ```
 2. Create a project on the Google Developers Console and enable the Google Drive API.
 3. Create credentials for your application to use.
-4. Authorize credentials for a desktop application
-To authenticate as an end user and access user data in your app, you need to create one or more OAuth 2.0 Client IDs. A client ID is used to identify a single app to Google's OAuth servers. If your app runs on multiple platforms, you must create a separate client ID for each platform.
-    In the Google Cloud console, go to Menu menu > APIs & Services > Credentials.
-    Go to Credentials
-    Click Create Credentials > OAuth client ID.
-    Click Application type > Desktop app.
-    In the Name field, type a name for the credential. This name is only shown in the Google Cloud console.
-    Click Create. The OAuth client created screen appears, showing your new Client ID and Client secret.
-    Click OK. The newly created credential appears under OAuth 2.0 Client IDs.
-    Save the downloaded JSON file as credentials.json, and move the file to your working directory.
+4. Authorize desktop application credentials:
+    -In the Google Cloud console, go to Menu > APIs & Services > Credentials.
+    -Create a new OAuth 2.0 Client ID for a Desktop app.
+    -Download the credentials.json file and move it to your working directory.
 5. Install the Google client library
 Install the Google client library for Python:
 
