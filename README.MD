@@ -19,8 +19,11 @@ git clone https://github.com/FindMalek/DriveLink.git
 4. Authorize desktop application credentials:
 
     -In the Google Cloud console, go to Menu > APIs & Services > Credentials.
+
     -Create a new OAuth 2.0 Client ID for a Desktop app.
+
     -Download the credentials.json file and move it to your working directory.
+    
 5. Install the Google client library
 Install the Google client library for Python:
 
