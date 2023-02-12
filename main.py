@@ -3,6 +3,7 @@ from googleapiclient.discovery import build
 from google.oauth2.credentials import Credentials
 from structureCheck import check_folder_structure
 
+from OAuth2Flow.authenticate_google_drive import authenticateGoogleDrive
 
 def get_links(client_name, week_number):
     # Build the credentials object
@@ -16,6 +17,8 @@ def get_links(client_name, week_number):
     return poster_link, story_link
 
 if __name__ == "__main__":
+    authenticateGoogleDrive()
+    
     # Get the client name and week number from the command line arguments
     client_name = sys.argv[1]
     week_number = sys.argv[2]
