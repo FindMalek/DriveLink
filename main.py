@@ -1,9 +1,13 @@
-import os
+import os, sys
 from googleapiclient.discovery import build
 from google.oauth2.credentials import Credentials
 from src.structureCheck import check_folder_structure
 
 from OAuth2Flow.authenticate_google_drive import authenticateGoogleDrive
+
+from src.delete_pycache import delete_pycache_folders
+
+from logging import log
 
 def get_links(client_name, week_number):
     # Build the credentials object
@@ -17,6 +21,13 @@ def get_links(client_name, week_number):
     return poster_link, story_link
 
 if __name__ == "__main__":
+    log = log.getLogger(__name__)
+    log.debug("Debug message")
+
+    # Deleting useless folders and files
+    delete_pycache_folders(os.getcwd())
+    
+    # For obtaining the Credentials 
     authenticateGoogleDrive()
     
     # Get the client name and week number from the command line arguments
