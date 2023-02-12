@@ -1,7 +1,7 @@
 import os
 from googleapiclient.discovery import build
 from google.oauth2.credentials import Credentials
-from structureCheck import check_folder_structure
+from src.structureCheck import check_folder_structure
 
 from OAuth2Flow.authenticate_google_drive import authenticateGoogleDrive
 
